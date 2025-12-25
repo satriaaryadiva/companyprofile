@@ -1,0 +1,114 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "Tentang Kami",
+    "products": "Produk",
+    "partnership": "Kemitraan",
+    "distribution": "Distribusi",
+    "certification": "Sertifikasi",
+    "contact": "Hubungi Kami"
+  },
+  "hero": {
+    "title": "Distributor FMCG Terpercaya untuk Kebutuhan Bisnis dan Konsumen Indonesia",
+    "subtitle": "PT. Rusindo Prima Food Industri menyediakan berbagai produk makanan dan minuman dengan harga kompetitif, distribusi stabil, dan jangkauan luas untuk retail, reseller, hingga mitra usaha di seluruh Indonesia.",
+    "viewProducts": "Lihat Produk",
+    "contactUs": "Hubungi Kami"
+  },
+  "about": {
+    "title": "Tentang Rusindo",
+    "description1": "PT. Rusindo Prima Food Industri berdiri sejak tahun 1981 dan berawal dari usaha rumahan yang berkembang menjadi perusahaan industri makanan dan distribusi FMCG.",
+    "description2": "Beroperasi di area seluas 30.000 m² di Sumatera Utara, Rusindo memproduksi berbagai produk makanan berkualitas seperti wafer, snack, mie lidi, saus, dan produk lainnya.",
+    "description3": "Produk Rusindo telah didistribusikan secara luas ke pasar domestik dan sejak tahun 2012 juga menjangkau pasar internasional, termasuk Korea, Taiwan, Kamboja, dan Vietnam.",
+    "yearsExperience": "Tahun Pengalaman",
+    "vision": {
+      "title": "Visi Kami",
+      "content": "Menjadi salah satu perusahaan makanan terkemuka di Indonesia dengan menghadirkan produk-produk berkualitas tinggi yang dipercaya oleh konsumen dan mitra usaha."
+    },
+    "mission": {
+      "title": "Misi Kami",
+      "item1": "Menyediakan produk makanan dengan standar kualitas terbaik dan aman dikonsumsi",
+      "item2": "Membangun sistem manajemen yang kuat, profesional, dan berkelanjutan",
+      "item3": "Terus berinovasi secara konsisten untuk tetap kompetitif di pasar",
+      "item4": "Memberikan dedikasi dan pelayanan terbaik guna memuaskan pelanggan"
+    },
+    "values": {
+      "title": "Nilai-Nilai Perusahaan",
+      "commitment": {
+        "title": "Komitmen",
+        "desc": "Memastikan ketersediaan serta pengiriman produk yang tepat waktu sebagai bentuk tanggung jawab kepada mitra dan pelanggan"
+      },
+      "integrity": {
+        "title": "Integritas",
+        "desc": "Menjunjung tinggi kejujuran dan integritas dalam setiap aktivitas bisnis serta membangun hubungan yang dilandasi kepercayaan"
+      },
+      "innovation": {
+        "title": "Inovasi",
+        "desc": "Terus mendorong inovasi dalam pengembangan produk dan proses kerja agar tetap kompetitif dan relevan"
+      },
+      "leadership": {
+        "title": "Kepemimpinan",
+        "desc": "Membangun tim yang solid dan profesional, bekerja dalam kesatuan dan saling menghormati"
+      },
+      "quality": {
+        "title": "Kualitas",
+        "desc": "Berfokus pada kualitas dalam setiap produk dan layanan untuk memberikan hasil terbaik"
+      }
+    }
+  },
+  "products": {
+    "title": "Produk Kami",
+    "subtitle": "Kami menyediakan berbagai produk FMCG yang mencakup mie instan, mie lidi, saus, dan aneka snack. Seluruh produk kami diproduksi dan didistribusikan dengan standar kualitas yang terjaga.",
+    "instantNoodles": "Mie Instan",
+    "stickyNoodles": "Mie Lidi",
+    "sauce": "Saus",
+    "snacks": "Snack & Wafer",
+    "viewDetail": "Lihat Detail"
+  },
+  "partnership": {
+    "title": "Business Relationship",
+    "supplier": {
+      "title": "Kemitraan dengan Supplier",
+      "description": "PT. Rusindo Prima Food Industri membuka peluang kerja sama jangka panjang dengan supplier yang mampu memenuhi standar kualitas dan persyaratan bahan baku perusahaan."
+    },
+    "distribution": {
+      "title": "Pemasaran & Distribusi",
+      "description": "PT. Rusindo Prima Food Industri membuka peluang kerja sama pemasaran dan distribusi dengan mitra di seluruh Indonesia maupun mancanegara."
+    },
+    "contactUs": "Hubungi Kami"
+  },
+  "distribution": {
+    "title": "Jaringan Distribusi",
+    "description": {
+      "title": "Distribusi Produk Rusindo",
+      "paragraph1": "Produk-produk PT. Rusindo Prima Food Industri didistribusikan melalui PT. Multi Agung Sukses (MAS) sebagai distributor tunggal resmi. PT. MAS didirikan pada tahun 2007 dan beroperasi untuk wilayah Sumatera Utara dan Aceh.",
+      "paragraph2": "Seiring dengan pertumbuhan bisnis, PT. Multi Agung Sukses telah berkembang dan saat ini memiliki enam cabang yang tersebar di berbagai wilayah Provinsi Sumatera Utara.",
+      "paragraph3": "Untuk memperluas jangkauan distribusi secara nasional, PT. Rusindo juga menjalin kerja sama dengan berbagai distributor besar di Surabaya, Kalimantan, Jakarta, Jawa Barat, Jawa Tengah, Makassar, dan Nusa Tenggara."
+    },
+    "contactInfo": "Informasi Kontak Distributor"
+  },
+  "certification": {
+    "title": "Sertifikasi & Penghargaan",
+    "subtitle": "Komitmen terhadap kualitas, keamanan pangan, dan profesionalisme dalam menjalankan usaha",
+    "iso": {
+      "title": "ISO",
+      "description": "Standar sistem manajemen yang memastikan proses operasional berjalan secara terstruktur dan konsisten"
+    },
+    "haccp": {
+      "title": "HACCP",
+      "description": "Sistem jaminan keamanan pangan yang mengidentifikasi, mengevaluasi, dan mengendalikan potensi bahaya"
+    },
+    "award": {
+      "title": "Product & Brand Award 2018",
+      "description": "Penghargaan dari Kementerian sebagai bentuk apresiasi atas kualitas produk dan brand"
+    }
+  },
+  "footer": {
+    "company": "PT. Rusindo Prima Food Industri",
+    "tagline": "Distributor FMCG Terpercaya sejak 1981",
+    "contact": "Kontak",
+    "menu": "Menu",
+    "email": "Email",
+    "backToTop": "Kembali ke Atas",
+    "copyright": "Hak Cipta Dilindungi"
+  }
+}

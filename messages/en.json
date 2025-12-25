@@ -1,0 +1,114 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "products": "Products",
+    "partnership": "Partnership",
+    "distribution": "Distribution",
+    "certification": "Certification",
+    "contact": "Contact Us"
+  },
+  "hero": {
+    "title": "Trusted FMCG Distributor for Business and Consumer Needs in Indonesia",
+    "subtitle": "PT. Rusindo Prima Food Industri provides various food and beverage products with competitive prices, stable distribution, and wide coverage for retail, resellers, and business partners throughout Indonesia.",
+    "viewProducts": "View Products",
+    "contactUs": "Contact Us"
+  },
+  "about": {
+    "title": "About Rusindo",
+    "description1": "PT. Rusindo Prima Food Industri was established in 1981 and started as a home business that grew into a food manufacturing and FMCG distribution company.",
+    "description2": "Operating on an area of 30,000 m² in North Sumatra, Rusindo produces various quality food products such as wafers, snacks, stick noodles, sauces, and other products.",
+    "description3": "Rusindo products have been widely distributed to the domestic market and since 2012 have also reached international markets, including Korea, Taiwan, Cambodia, and Vietnam.",
+    "yearsExperience": "Years of Experience",
+    "vision": {
+      "title": "Our Vision",
+      "content": "To become one of the leading food companies in Indonesia by delivering high-quality products trusted by consumers and business partners."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "item1": "Provide food products with the best quality standards and safe for consumption",
+      "item2": "Build a strong, professional, and sustainable management system",
+      "item3": "Continue to innovate consistently to remain competitive in the market",
+      "item4": "Provide dedication and the best service to satisfy customers"
+    },
+    "values": {
+      "title": "Corporate Values",
+      "commitment": {
+        "title": "Commitment",
+        "desc": "Ensuring product availability and timely delivery as a form of responsibility to partners and customers"
+      },
+      "integrity": {
+        "title": "Integrity",
+        "desc": "Upholding honesty and integrity in every business activity and building trust-based relationships"
+      },
+      "innovation": {
+        "title": "Innovation",
+        "desc": "Continuously driving innovation in product development and work processes to remain competitive and relevant"
+      },
+      "leadership": {
+        "title": "Leadership",
+        "desc": "Building a solid and professional team, working in unity and mutual respect"
+      },
+      "quality": {
+        "title": "Quality",
+        "desc": "Focusing on quality in every product and service to deliver the best results"
+      }
+    }
+  },
+  "products": {
+    "title": "Our Products",
+    "subtitle": "We provide various FMCG products including instant noodles, stick noodles, sauces, and various snacks. All our products are produced and distributed with maintained quality standards.",
+    "instantNoodles": "Instant Noodles",
+    "stickyNoodles": "Stick Noodles",
+    "sauce": "Sauce",
+    "snacks": "Snacks & Wafer",
+    "viewDetail": "View Detail"
+  },
+  "partnership": {
+    "title": "Business Relationship",
+    "supplier": {
+      "title": "Partnership with Suppliers",
+      "description": "PT. Rusindo Prima Food Industri opens long-term cooperation opportunities with suppliers who can meet quality standards and company raw material requirements."
+    },
+    "distribution": {
+      "title": "Marketing & Distribution",
+      "description": "PT. Rusindo Prima Food Industri opens marketing and distribution cooperation opportunities with partners throughout Indonesia and abroad."
+    },
+    "contactUs": "Contact Us"
+  },
+  "distribution": {
+    "title": "Distribution Network",
+    "description": {
+      "title": "Rusindo Product Distribution",
+      "paragraph1": "PT. Rusindo Prima Food Industri products are distributed through PT. Multi Agung Sukses (MAS) as the official sole distributor. PT. MAS was established in 2007 and operates in North Sumatra and Aceh regions.",
+      "paragraph2": "Along with business growth, PT. Multi Agung Sukses has expanded and currently has six branches spread across various regions in North Sumatra Province.",
+      "paragraph3": "To expand national distribution coverage, PT. Rusindo also collaborates with various major distributors in Surabaya, Kalimantan, Jakarta, West Java, Central Java, Makassar, and Nusa Tenggara."
+    },
+    "contactInfo": "Distributor Contact Information"
+  },
+  "certification": {
+    "title": "Certification & Awards",
+    "subtitle": "Commitment to quality, food safety, and professionalism in running the business",
+    "iso": {
+      "title": "ISO",
+      "description": "Management system standard that ensures operational processes run in a structured and consistent manner"
+    },
+    "haccp": {
+      "title": "HACCP",
+      "description": "Food safety assurance system that identifies, evaluates, and controls potential hazards"
+    },
+    "award": {
+      "title": "Product & Brand Award 2018",
+      "description": "Award from the Ministry as a form of appreciation for product and brand quality"
+    }
+  },
+  "footer": {
+    "company": "PT. Rusindo Prima Food Industri",
+    "tagline": "Trusted FMCG Distributor since 1981",
+    "contact": "Contact",
+    "menu": "Menu",
+    "email": "Email",
+    "backToTop": "Back to Top",
+    "copyright": "All Rights Reserved"
+  }
+}
