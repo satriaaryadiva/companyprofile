@@ -5,5 +5,5 @@ export default createMiddleware(routing);
 
 export const config = {
   // Matcher untuk halaman yang menggunakan i18n
-  matcher: ['/', '/(id|en)/:path*']
+  matcher: ['/','/(id|en)/:path*']
 };
