@@ -34,8 +34,8 @@ export const Navigation: React.FC = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm shadow-md'
+      className={`fixed w-full   *: z-50  transition-all duration-300 ${
+        scrolled ? 'bg-(--secondary) shadow-lg' : ' /95 backdrop-blur-sm shadow-md'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -43,12 +43,12 @@ export const Navigation: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="text-2xl font-bold text-blue-600"
+            className="text-2xl font-bold   "
           >
-            RUSINDO
+            R 
           </motion.div>
 
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden md:flex     font-bold items-center space-x-6">
             {navItems.map((item, idx) => (
               <motion.a
                 key={item.href}
@@ -56,13 +56,13 @@ export const Navigation: React.FC = () => {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 * idx }}
-                className="text-gray-700 hover:text-blue-600 transition-colors"
+                className="text-white font-bold hover:text-(--secondary) transition-colors"
               >
                 {item.label}
               </motion.a>
             ))}
             <LanguageSwitcher />
-            <Button size="md" onClick={() => window.open('https://wa.me/6281260468888', '_blank')}>
+            <Button className="text-foreground font-bold" variant='nav' size="md" onClick={() => window.open('https://wa.me/6281260468888', '_blank')}>
               {t('contact')}
             </Button>
           </div>
@@ -92,7 +92,7 @@ export const Navigation: React.FC = () => {
                   {item.label}
                 </a>
               ))}
-              <div className="pt-2 border-t">
+              <div className="pt-2 border-t ">
                 <LanguageSwitcher />
               </div>
             </div>

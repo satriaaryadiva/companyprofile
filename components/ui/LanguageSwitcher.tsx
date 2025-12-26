@@ -24,7 +24,7 @@ export const LanguageSwitcher: React.FC = () => {
           onClick={() => switchLanguage('id')}
           className={`px-3 py-1 rounded-md text-sm font-medium transition-all ${
             locale === 'id'
-              ? 'bg-blue-600 text-white shadow-sm'
+              ? 'bg-(--secondary)  shadow-sm'
               : 'text-gray-600 hover:text-gray-900'
           }`}
         >
@@ -35,7 +35,7 @@ export const LanguageSwitcher: React.FC = () => {
           onClick={() => switchLanguage('en')}
           className={`px-3 py-1 rounded-md text-sm font-medium transition-all ${
             locale === 'en'
-              ? 'bg-blue-600 text-white shadow-sm'
+              ? 'text-(--secondary) shadow-sm'
               : 'text-gray-600 hover:text-gray-900'
           }`}
         >
