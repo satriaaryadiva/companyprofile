@@ -3,42 +3,31 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import { Button } from '../ui';
-
-interface NavItem {
-  label: string;
-  href: string;
-}
+import { LanguageSwitcher } from'../ui/LanguageSwitcher'
 
 export const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const t = useTranslations('nav');
 
-  const navItems: NavItem[] = [
-    { label: 'Home', href: '#home' },
-    { label: 'Tentang Kami', href: '#tentang' },
-    { label: 'Produk', href: '#produk' },
-    { label: 'Kemitraan', href: '#kemitraan' },
-    { label: 'Distribusi', href: '#distribusi' },
-    { label: 'Sertifikasi', href: '#sertifikasi' }
+  const navItems = [
+    { label: t('home'), href: '#home' },
+    { label: t('about'), href: '#tentang' },
+    { label: t('products'), href: '#produk' },
+    { label: t('partnership'), href: '#kemitraan' },
+    { label: t('distribution'), href: '#distribusi' },
+    { label: t('certification'), href: '#sertifikasi' }
   ];
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const handleNavClick = (href: string) => {
-    setIsOpen(false);
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <motion.nav
@@ -51,25 +40,15 @@ export const Navigation: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          {/* Logo */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.2 }}
-            className="flex items-center"
+            className="text-2xl font-bold text-blue-600"
           >
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="text-2xl font-bold text-blue-600 cursor-pointer"
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            >
-              RUSINDO
-            </motion.div>
+            RUSINDO
           </motion.div>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {navItems.map((item, idx) => (
               <motion.a
                 key={item.href}
@@ -77,88 +56,45 @@ export const Navigation: React.FC = () => {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 * idx }}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavClick(item.href);
-                }}
-                className="text-gray-700 hover:text-blue-600 transition-colors relative group"
+                className="text-gray-700 hover:text-blue-600 transition-colors"
               >
                 {item.label}
-                <motion.span
-                  className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"
-                />
               </motion.a>
             ))}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.6 }}
-            >
-              <Button
-                size="md"
-                onClick={() => window.open('https://wa.me/6281260468888', '_blank')}
-              >
-                Hubungi Kami
-              </Button>
-            </motion.div>
+            <LanguageSwitcher />
+            <Button size="md" onClick={() => window.open('https://wa.me/6281260468888', '_blank')}>
+              {t('contact')}
+            </Button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <motion.button
-            whileTap={{ scale: 0.9 }}
-            className="md:hidden"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
-          >
+          <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </motion.button>
+          </button>
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="md:hidden bg-white border-t overflow-hidden"
+            className="md:hidden bg-white border-t"
           >
             <div className="px-4 py-4 space-y-3">
-              {navItems.map((item, idx) => (
-                <motion.a
+              {navItems.map((item) => (
+                <a
                   key={item.href}
                   href={item.href}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.1 * idx }}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleNavClick(item.href);
-                  }}
-                  className="block text-gray-700 hover:text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-lg transition-colors"
+                  onClick={() => setIsOpen(false)}
+                  className="block text-gray-700 hover:text-blue-600"
                 >
                   {item.label}
-                </motion.a>
+                </a>
               ))}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 }}
-                className="pt-2"
-              >
-                <Button
-                  size="md"
-                  className="w-full"
-                  onClick={() => {
-                    window.open('https://wa.me/6281260468888', '_blank');
-                    setIsOpen(false);
-                  }}
-                >
-                  Hubungi Kami
-                </Button>
-              </motion.div>
+              <div className="pt-2 border-t">
+                <LanguageSwitcher />
+              </div>
             </div>
           </motion.div>
         )}

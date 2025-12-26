@@ -5,17 +5,35 @@ import { ChevronRight, Package } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { Button, Container, Section } from '../ui';
-import { container, float, item } from '../motions/motion';
+import { float } from '../motions/motion';
 
 export const HeroSection: React.FC = () => {
   const t = useTranslations('hero');
+  const tProducts = useTranslations('products');
 
   const products = [
-    { name: t('instantNoodles'), gradient: 'from-blue-100 to-blue-200', color: 'text-blue-600' },
-    { name: t('snacks'), gradient: 'from-green-100 to-green-200', color: 'text-green-600' },
-    { name: t('sauce'), gradient: 'from-red-100 to-red-200', color: 'text-red-600' },
-    { name: t('stickyNoodles'), gradient: 'from-yellow-100 to-yellow-200', color: 'text-yellow-600' }
+    { name: tProducts('instantNoodles'), gradient: 'from-blue-100 to-blue-200', color: 'text-blue-600' },
+    { name: tProducts('snacks'), gradient: 'from-green-100 to-green-200', color: 'text-green-600' },
+    { name: tProducts('sauce'), gradient: 'from-red-100 to-red-200', color: 'text-red-600' },
+    { name: tProducts('stickyNoodles'), gradient: 'from-yellow-100 to-yellow-200', color: 'text-yellow-600' }
   ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2 }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 }
+    }
+  };
 
  
 
@@ -51,24 +69,24 @@ export const HeroSection: React.FC = () => {
       <Container className="py-20 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div
-            variants={container }
+            variants={containerVariants}
             initial="hidden"
             animate="visible"
           >
             <motion.h1
-              variants={item}
+              variants={itemVariants}
               className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight"
             >
               {t('title')}
             </motion.h1>
             <motion.p
-              variants={item}
+              variants={itemVariants}
               className="text-xl text-gray-600 mb-8 leading-relaxed"
             >
               {t('subtitle')}
             </motion.p>
             <motion.div
-              variants={item}
+              variants={itemVariants}
               className="flex flex-wrap gap-4"
             >
               <Button 
