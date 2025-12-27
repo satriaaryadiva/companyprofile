@@ -17,7 +17,8 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        sans: ["Montserrat", "sans-serif"],
+        
+    sans: ["var(--font-montserrat)", "sans-serif"],
         
       },colors: {
         primary: "#1d4ed8",

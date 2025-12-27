@@ -12,8 +12,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -21,6 +21,7 @@
     --background: #ffcb04;
     --foreground:  #007f3d;
     --text-white :#ffffff ;
+    --font-sans: var(--font-montserrat);
  
   }
 }

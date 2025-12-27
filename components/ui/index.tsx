@@ -9,6 +9,7 @@ export { Section } from '../section/Section';
 export { ProductCard } from './ProductCard';
 export { ValueCard } from './ValueCard';
 export { CertificationCard } from './CertificationCard';
+export  { ProductCarousel} from "./ProductCarausel"
 export { ContactInfo } from './ContactInfo';
 export { AboutSection} from '../section/AboutSection'
 export { IconBox } from './IconBox';
