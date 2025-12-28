@@ -1,11 +1,11 @@
 // app/layout.tsx
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
-import './globals.css';
+import "./globals.css";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
-  variable: "--font-montserrat",
+  variable: "--font-monsterat",
   display: "swap",
 });
 
@@ -16,8 +16,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning >
-      <body className={`${montserrat.variable} font-sans bg-background text-foreground`} suppressHydrationWarning >
+    <html   suppressHydrationWarning>
+      <body className={`${montserrat.variable} font-(--font-monsterat)`} suppressHydrationWarning>
         {children}
       </body>
     </html>

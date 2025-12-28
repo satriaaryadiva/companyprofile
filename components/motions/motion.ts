@@ -21,6 +21,26 @@ export const item: Variants = {
     },
   },
 };
+export const modalBackdrop : Variants = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0 }
+};
+
+export const modalContent : Variants = {
+  initial: { scale: 0.85, opacity: 0, y: 20 },
+  animate: { 
+    scale: 1, 
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 200,
+      damping: 20,
+    }
+  },
+  exit: { scale: 0.9, opacity: 0 }
+};
 
 export const float: Variants = {
   float: {

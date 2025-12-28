@@ -9,7 +9,6 @@
     "contact": "Hubungi Kami"
   },
   "hero": {
-    
     "title": "Distributor FMCG Terpercaya untuk Kebutuhan Bisnis dan Konsumen Indonesia",
     "subtitle": "PT. Rusindo Prima Food Industri menyediakan berbagai produk makanan dan minuman dengan harga kompetitif, distribusi stabil, dan jangkauan luas untuk retail, reseller, hingga mitra usaha di seluruh Indonesia.",
     "viewProducts": "Lihat Produk",
@@ -81,9 +80,9 @@
     "title": "Jaringan Distribusi",
     "description": {
       "title": "Distribusi Produk Rusindo",
-      "paragraph1": "Produk-produk PT. Rusindo Prima Food Industri didistribusikan melalui PT. Multi Agung Sukses (MAS) sebagai distributor tunggal resmi. PT. MAS didirikan pada tahun 2007 dan beroperasi untuk wilayah Sumatera Utara dan Aceh.",
-      "paragraph2": "Seiring dengan pertumbuhan bisnis, PT. Multi Agung Sukses telah berkembang dan saat ini memiliki enam cabang yang tersebar di berbagai wilayah Provinsi Sumatera Utara.",
-      "paragraph3": "Untuk memperluas jangkauan distribusi secara nasional, PT. Rusindo juga menjalin kerja sama dengan berbagai distributor besar di Surabaya, Kalimantan, Jakarta, Jawa Barat, Jawa Tengah, Makassar, dan Nusa Tenggara."
+      "paragraph1": "Produk-produk PT. Rusindo Prima Food Industri didistribusikan melalui PT. Multi Agung Sukses (MAS) sebagai distributor tunggal resmi.",
+      "paragraph2": "Seiring dengan pertumbuhan bisnis, PT. Multi Agung Sukses telah berkembang dan saat ini memiliki enam cabang di berbagai wilayah Sumatera Utara.",
+      "paragraph3": "Untuk memperluas jangkauan distribusi nasional, PT. Rusindo bekerja sama dengan berbagai distributor di Surabaya, Kalimantan, Jakarta, Jawa Barat, Jawa Tengah, Makassar, dan Nusa Tenggara."
     },
     "contactInfo": "Informasi Kontak Distributor"
   },
@@ -111,5 +110,57 @@
     "email": "Email",
     "backToTop": "Kembali ke Atas",
     "copyright": "Hak Cipta Dilindungi"
+  },
+  "pages": {
+    "products": {
+      "title": "Produk Kami",
+      "description":"Kami menyediakan berbagai produk FMCG yang mencakup mie instan, mie lidi, saus, dan aneka snack. Seluruh produk kami diproduksi dan didistribusikan dengan standar kualitas yang terjaga",
+      "subtitle": "Jelajahi berbagai produk berkualitas dari Rusindo",
+      "categories": "Kategori Produk",
+      "allProducts": "Semua Produk",
+      "details": "Detail Produk",
+      
+      "specifications": "Spesifikasi",
+      "packaging": "Kemasan",
+      "backToProducts": "Kembali ke Produk"
+    },
+    "about": {
+      "title": "Tentang Kami",
+      "subtitle": "Mengenal lebih dekat PT. Rusindo Prima Food Industri",
+      "history": {
+        "title": "Sejarah Perusahaan",
+        "content": "Didirikan pada tahun 1981, PT. Rusindo Prima Food Industri memulai perjalanan dari usaha rumahan hingga tumbuh menjadi industri FMCG besar."
+      },
+      "facility": {
+        "title": "Fasilitas Produksi",
+        "content": "Area produksi seluas 30.000 m² dengan teknologi modern dan standar internasional."
+      },
+      "team": {
+        "title": "Tim Profesional",
+        "content": "Didukung tim berpengalaman yang berkomitmen menghadirkan kualitas terbaik."
+      }
+    },
+    "awards": {
+      "title": "Sertifikasi & Penghargaan",
+      "subtitle": "Pengakuan atas komitmen kualitas dan keunggulan produk kami",
+      "certifications": "Sertifikasi",
+      "achievements": "Penghargaan",
+      "year": "Tahun"
+    },
+    "contact": {
+      "title": "Hubungi Kami",
+      "subtitle": "Kami siap membantu kebutuhan bisnis Anda",
+    
+      "info": {
+        "title": "Informasi Kontak",
+        "address": "Alamat",
+        "phone": "Telepon",
+        "email": "Email",
+        "hours": "Jam Operasional",
+        "workdays": "Senin - Jumat: 08:00 - 17:00",
+        "saturday": "Sabtu: 08:00 - 12:00"
+      },
+      "map": "Lokasi Kami"
+    }
   }
 }

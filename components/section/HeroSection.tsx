@@ -7,7 +7,8 @@ import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { Button, Container, ProductCarousel, Section } from '../ui';
 import { container, float, item } from '../motions/motion';
-import Image from 'next/image';
+import { b } from 'framer-motion/client';
+  
 
 export const HeroSection: React.FC = () => {
   const t = useTranslations('hero');
@@ -37,8 +38,13 @@ export const HeroSection: React.FC = () => {
   return (
     <Section
       id="home"
-      className="relative pt-10 min-h-screen flex items-center bg-center bg-no-repeat bg-cover overflow-hidden"
-      style={{ backgroundImage: "url('/hero.webp')" }}
+      className="relative pt-10 min-h-screen  bg-fixed flex items-center bg-center bg-no-repeat bg-cover overflow-hidden"
+      style={{ backgroundImage: "url('/hero.webp')" ,
+        backgroundPosition: 'center center',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat'
+         
+      }}
     >
       <div className="absolute inset-0 bg-linear-to-b from-black/80 via-black/60 to-black/50" />
 

@@ -11,7 +11,7 @@ export const Section = ({ children, id, className , bgColor, bgImage  ,style } :
 }) => {
   return (
     <section id={id} className={`py-20 ${bgColor} ${className}  `} 
-      style={bgImage ? { backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center', ...style } : { ...style }} >
+      style={bgImage ? { backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' , ...style } : { ...style }} >
       {children}
     </section>
   );

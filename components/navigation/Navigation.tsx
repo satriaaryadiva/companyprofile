@@ -7,7 +7,8 @@ import { useTranslations } from 'next-intl';
 import { Button } from '../ui';
 import { LanguageSwitcher } from '../ui/LanguageSwitcher';
 
-export const Navigation: React.FC = () => {
+
+export const Navigation: React.FC = ( {}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const t = useTranslations('nav');
@@ -15,7 +16,7 @@ export const Navigation: React.FC = () => {
   const navItems = [
     { label: t('home'), href: '#home' },
     { label: t('about'), href: '#tentang' },
-    { label: t('products'), href: '#produk' },
+    { label: t('products'), href: '/products' },
     { label: t('partnership'), href: '#kemitraan' },
     { label: t('distribution'), href: '#distribusi' },
     { label: t('certification'), href: '#sertifikasi' }
@@ -31,6 +32,7 @@ export const Navigation: React.FC = () => {
     <motion.nav
       initial={{ y: -80 }}
       animate={{ y: 0 }}
+
       transition={{ duration: 0.4, ease: 'easeOut' }}
       className={`fixed w-full z-50 transition-all duration-300
         ${scrolled 

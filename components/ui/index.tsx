@@ -13,6 +13,7 @@ export  { ProductCarousel} from "./ProductCarausel"
 export { ContactInfo } from './ContactInfo';
 export { AboutSection} from '../section/AboutSection'
 export { IconBox } from './IconBox';
+export { ProductModal } from './ProductModal';
 export { HeroSection } from '../section/HeroSection'
 export { ProductsSection } from '../section/ProductSection'
 export { PartnershipSection } from  "../section/PartnerShipSection"; 

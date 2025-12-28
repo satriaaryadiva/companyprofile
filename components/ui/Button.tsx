@@ -23,7 +23,7 @@ className?: string;
     danger: 'bg-red-600 text-white hover:bg-red-700 active:bg-red-800',
     success: 'bg-green-600 text-white hover:bg-green-700 active:bg-green-800',
     outline: 'border-2 border-blue-600 text-blue-600 hover:bg-blue-50 active:bg-blue-100',
-    ghost: 'text-gray-700 hover:bg-gray-100 active:bg-gray-200',
+    ghost: 'text-gray-700 bg-white hover:bg-gray-100 active:bg-gray-200',
     nav: '   text-background  bg-(--secondary) font-bold  hover:bg-blue-700 active:bg-blue-800',
   };
   

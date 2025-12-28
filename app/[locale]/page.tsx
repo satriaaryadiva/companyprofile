@@ -5,9 +5,9 @@
 import {
   HeroSection,
   AboutSection,
-  Navigation,
+ 
   ProductsSection,
-  Footer,
+ 
   PartnershipSection,
   DistributionSection,
   CertificationSection
@@ -16,14 +16,14 @@ import {
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <Navigation />
+    
       <HeroSection />
       <AboutSection />
       <ProductsSection />
       <PartnershipSection />
       <DistributionSection />
       <CertificationSection />
-      <Footer />
+     
     </div>
   );
 }
