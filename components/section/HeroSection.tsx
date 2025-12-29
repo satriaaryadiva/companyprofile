@@ -7,13 +7,12 @@ import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { Button, Container, ProductCarousel, Section } from '../ui';
 import { container, float, item } from '../motions/motion';
-import { b } from 'framer-motion/client';
-  
+import { useRouter } from 'next/navigation'; // ✅ PERBAIKAN
 
 export const HeroSection: React.FC = () => {
   const t = useTranslations('hero');
+  const router = useRouter();
   const tProducts = useTranslations('products');
-  const carouselRef = useRef<HTMLDivElement>(null);
 
   const products = [
     { name: tProducts('instantNoodles'), img: '/products/noodle.webp' },
@@ -22,49 +21,32 @@ export const HeroSection: React.FC = () => {
     { name: tProducts('stickyNoodles'), img: '/products/lidi.webp' },
   ];
 
-  // AUTO SLIDE (Mobile)
-  useEffect(() => {
-    const el = carouselRef.current;
-    if (!el) return;
-    const interval = setInterval(() => {
-      el.scrollBy({ left: 260, behavior: 'smooth' });
-      if (el.scrollLeft + el.clientWidth >= el.scrollWidth - 10) {
-        el.scrollTo({ left: 0, behavior: 'smooth' });
-      }
-    }, 2200);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <Section
       id="home"
-      className="relative pt-10 min-h-screen  bg-fixed flex items-center bg-center bg-no-repeat bg-cover overflow-hidden"
-      style={{ backgroundImage: "url('/hero.webp')" ,
-        backgroundPosition: 'center center',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat'
-         
-      }}
+      className="relative pt-10 min-h-screen flex items-center bg-center bg-no-repeat bg-cover overflow-hidden"
+      style={{ backgroundImage: "url('/main.webp')" }}
     >
-      <div className="absolute inset-0 bg-linear-to-b from-black/80 via-black/60 to-black/50" />
+      {/* 🔥 Gradient Overlay */}
+      <div className="absolute inset-0 bg-linear-to-b from-black/80 via-black/50 to-black/90" />
 
-      <div className="absolute inset-0 opacity-30 pointer-events-none">
+      {/* Glow Accent */}
+      <div className="absolute inset-0 opacity-40 pointer-events-none">
         <motion.div
-          animate={{ scale: [1, 1.12, 1], opacity: [0.2, 0.32, 0.2] }}
-          transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute right-0 top-10 w-96 h-96 bg-(--primary) blur-[100px] rounded-full"
+          animate={{ scale: [1, 1.15, 1], opacity: [0.2, 0.35, 0.2] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute right-0 top-10 w-96 h-96 bg-(--primary) blur-[130px] rounded-full"
         />
-
       </div>
 
-      <Container className="relative z-10 py-20">
-        <div className="grid md:grid-cols-2 gap-14">
+      <Container className="relative z-10 py-20 md:px20">
+        <div className="grid md:grid-cols-2 gap-16">
 
-          {/* 🟣 MOBILE CAROUSEL */}
-          <ProductCarousel  products={products} />
+          {/* 📱 MOBILE CAROUSEL */}
+          <ProductCarousel products={products} />
 
           {/* 💻 DESKTOP GRID */}
-          <div className="order-1 md:order-2 hidden md:block md:pl-6">
+          <div className="hidden order-1 md:order-2 md:block md:pl-6">
             <div className="grid grid-cols-2 gap-5">
               {products.map((product, idx) => (
                 <motion.div
@@ -72,36 +54,45 @@ export const HeroSection: React.FC = () => {
                   variants={float}
                   animate="animate"
                   transition={{ delay: idx * 0.2 }}
-                  initial={{ opacity: 0, scale: 0.8 }}
+                  initial={{ opacity: 0, scale: 0.85 }}
                   whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
                   whileHover={{ scale: 1.05 }}
-                  className={`bg-white p-6 rounded-2xl shadow-lg ${idx % 2 !== 0 ? 'mt-8' : ''}`}
+                  viewport={{ once: true }}
+                  className={`bg-white/10 backdrop-blur-xl p-6 rounded-2xl border border-white/10 shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer ${idx % 2 !== 0 ? 'mt-8' : ''}`}
                 >
-                  <div className={`w-full h-40 bg-linear-to-br   rounded-lg flex items-center justify-center`}>
-                    <Package size={48}  />
+                  <div className="w-full h-40 bg-linear-to-br from-(--primary)/20 to-black rounded-lg flex items-center justify-center">
+                    <Package size={48} className="text-white/80" />
                   </div>
-                  <p className="mt-4 font-semibold text-center">{product.name}</p>
+                  <p className="mt-4 font-semibold text-center text-white">{product.name}</p>
                 </motion.div>
               ))}
             </div>
           </div>
 
-          {/* TEXT AREA */}
-          <motion.div variants={container} initial="hidden" animate="visible" className="order-2 md:order-1">
-            <motion.h1 variants={item} className="text-4xl text-background md:text-5xl font-extrabold   mb-12 drop-shadow-xl font-montserrat">
+          {/* ✍️ TEXT */}
+          <motion.div variants={container} initial="hidden" animate="visible">
+            <motion.h1 variants={item} className="text-4xl  md:pl-5 md:text-5xl font-extrabold mb-8 drop-shadow-xl text-background leading-tight">
               {t('title')}
             </motion.h1>
 
-            <motion.p variants={item} className="text-lg md:text-xl pl-3 font-bold text-white  mb-10 leading-relaxed max-w-lg font-montserrat">
+            <motion.p variants={item} className="text-lg md:text-xl font-medium text-white/90 mb-10 leading-relaxed max-w-lg">
               {t('subtitle')}
             </motion.p>
 
             <motion.div variants={item} className="flex flex-wrap gap-4">
-              <Button variant='primary' className="bg-(--primary) text-secondary font-extrabold hover:bg-(--secondary)" size="lg">
+              <Button variant='primary'
+                onClick={() => router.push('/produk')}
+                className="bg-(--primary) text-black font-bold hover:bg-white hover:text-black transition-all"
+                size="lg"
+              >
                 {t('viewProducts')} <ChevronRight size={20} />
               </Button>
-              <Button variant="nav" size="lg" className="border-white font-bold text-white hover:bg-white hover:text-black">
+
+              <Button variant='nav'
+                onClick={() => router.push('/contact')}
+                 
+                size="lg"
+              >
                 {t('contactUs')}
               </Button>
             </motion.div>

@@ -20,6 +20,10 @@
     "description2": "Operating on an area of 30,000 m² in North Sumatra, Rusindo produces various quality food products such as wafers, snacks, stick noodles, sauces, and other products.",
     "description3": "Rusindo products have been widely distributed to the domestic market and since 2012 have also reached international markets, including Korea, Taiwan, Cambodia, and Vietnam.",
     "yearsExperience": "Years of Experience",
+    "expand": {
+      "title": "2012",
+      "desc": "International Expansion"
+    },  
     "vision": {
       "title": "Our Vision",
       "content": "To become one of the leading food companies in Indonesia by delivering high-quality products trusted by consumers and business partners."
@@ -31,6 +35,10 @@
       "item3": "Continue to innovate consistently to remain competitive in the market",
       "item4": "Provide dedication and the best service to satisfy customers"
     },
+    "quality": {
+        "title": "Quality",
+        "content": "Focusing on quality in every product and service to deliver the best results"
+      },
     "values": {
       "title": "Corporate Values",
       "commitment": {
@@ -80,9 +88,9 @@
     "title": "Distribution Network",
     "description": {
       "title": "Rusindo Product Distribution",
-      "paragraph1": "PT. Rusindo Prima Food Industri products are distributed through PT. Multi Agung Sukses (MAS) as the official sole distributor. PT. MAS was established in 2007 and operates in North Sumatra and Aceh regions.",
-      "paragraph2": "Along with business growth, PT. Multi Agung Sukses has expanded and currently has six branches spread across various regions in North Sumatra Province.",
-      "paragraph3": "To expand national distribution coverage, PT. Rusindo also collaborates with various major distributors in Surabaya, Kalimantan, Jakarta, West Java, Central Java, Makassar, and Nusa Tenggara."
+      "paragraph1": "PT. Rusindo Prima Food Industri products are distributed through PT. Multi Agung Sukses (MAS) as the official sole distributor.",
+      "paragraph2": "Along with business growth, PT. Multi Agung Sukses has expanded and currently has six branches in various regions of North Sumatra.",
+      "paragraph3": "To expand national distribution coverage, PT. Rusindo collaborates with various distributors in Surabaya, Kalimantan, Jakarta, West Java, Central Java, Makassar, and Nusa Tenggara."
     },
     "contactInfo": "Distributor Contact Information"
   },
@@ -110,10 +118,12 @@
     "email": "Email",
     "backToTop": "Back to Top",
     "copyright": "All Rights Reserved"
-  },"pages": {
+  },
+  "pages": {
     "products": {
       "title": "Our Products",
-      "subtitle": "Explore our quality products from Rusindo",
+      "description": "We provide various FMCG products including instant noodles, stick noodles, sauces, and various snacks. All our products are produced and distributed with maintained quality standards",
+      "subtitle": "Explore quality products from Rusindo",
       "categories": "Product Categories",
       "allProducts": "All Products",
       "details": "Product Details",
@@ -126,40 +136,27 @@
       "subtitle": "Get to know PT. Rusindo Prima Food Industri",
       "history": {
         "title": "Company History",
-        "content": "Founded in 1981, PT. Rusindo Prima Food Industri started its journey from a simple home business and grew into one of Indonesia's leading food manufacturing and FMCG distribution companies."
+        "content": "Founded in 1981, PT. Rusindo Prima Food Industri started its journey from a home business and grew into a large FMCG industry."
       },
       "facility": {
         "title": "Production Facility",
-        "content": "With a production area of 30,000 m² located in North Sumatra, we are equipped with modern technology and international production standards."
+        "content": "Production area of 30,000 m² with modern technology and international standards."
       },
       "team": {
         "title": "Professional Team",
-        "content": "Supported by an experienced team with high commitment to delivering the best quality products."
+        "content": "Supported by an experienced team committed to delivering the best quality."
       }
     },
     "awards": {
       "title": "Certifications & Awards",
       "subtitle": "Recognition of our commitment to quality and product excellence",
       "certifications": "Certifications",
-      "achievements": "Achievements",
+      "achievements": "Awards",
       "year": "Year"
     },
     "contact": {
       "title": "Contact Us",
       "subtitle": "We are ready to help your business needs",
-      "form": {
-        "title": "Send Message",
-        "name": "Full Name",
-        "email": "Email",
-        "phone": "Phone Number",
-        "company": "Company Name",
-        "message": "Message",
-        "subject": "Subject",
-        "send": "Send Message",
-        "sending": "Sending...",
-        "success": "Message sent successfully!",
-        "error": "An error occurred, please try again."
-      },
       "info": {
         "title": "Contact Information",
         "address": "Address",

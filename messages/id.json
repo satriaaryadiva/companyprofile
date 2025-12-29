@@ -19,7 +19,11 @@
     "description1": "PT. Rusindo Prima Food Industri berdiri sejak tahun 1981 dan berawal dari usaha rumahan yang berkembang menjadi perusahaan industri makanan dan distribusi FMCG.",
     "description2": "Beroperasi di area seluas 30.000 m² di Sumatera Utara, Rusindo memproduksi berbagai produk makanan berkualitas seperti wafer, snack, mie lidi, saus, dan produk lainnya.",
     "description3": "Produk Rusindo telah didistribusikan secara luas ke pasar domestik dan sejak tahun 2012 juga menjangkau pasar internasional, termasuk Korea, Taiwan, Kamboja, dan Vietnam.",
-    "yearsExperience": "Tahun Pengalaman",
+    "yearsExperience": "Tahun Didirikan",
+    "expand": {
+      "title": "2012",
+      "desc": "Ekspansi Internasional"
+    },
     "vision": {
       "title": "Visi Kami",
       "content": "Menjadi salah satu perusahaan makanan terkemuka di Indonesia dengan menghadirkan produk-produk berkualitas tinggi yang dipercaya oleh konsumen dan mitra usaha."
@@ -125,20 +129,36 @@
       "backToProducts": "Kembali ke Produk"
     },
     "about": {
+
       "title": "Tentang Kami",
-      "subtitle": "Mengenal lebih dekat PT. Rusindo Prima Food Industri",
+      "subtitle": "PT. Rusindo Prima Food Industri berdiri sejak tahun 1981 dan berawal dari usaha rumahan yang berkembang menjadi perusahaan industri makanan dan distribusi FMCG. Beroperasi di area seluas 30.000 m² di Sumatera Utara, Rusindo memproduksi berbagai produk makanan berkualitas seperti wafer, snack, mie lidi, saus, dan produk lainnya. Produk Rusindo telah didistribusikan secara luas ke pasar domestik dan sejak tahun 2012 juga menjangkau pasar internasional, termasuk Korea, Taiwan, Kamboja, dan Vietnam.", 
       "history": {
-        "title": "Sejarah Perusahaan",
+        "title": " Sejarah Perusahaan",
         "content": "Didirikan pada tahun 1981, PT. Rusindo Prima Food Industri memulai perjalanan dari usaha rumahan hingga tumbuh menjadi industri FMCG besar."
       },
       "facility": {
         "title": "Fasilitas Produksi",
         "content": "Area produksi seluas 30.000 m² dengan teknologi modern dan standar internasional."
       },
+      "quality": {
+        "title": "Kualitas Produk",
+        "content": "Produk Rusindo dikemas dengan kualitas terbaik dan aman dikonsumsi."
+      },
       "team": {
         "title": "Tim Profesional",
         "content": "Didukung tim berpengalaman yang berkomitmen menghadirkan kualitas terbaik."
       }
+      ,"vision":{
+        "title" :" Visi Kami",
+        "content":"Menjadi salah satu perusahaan makanan terkemuka di Indonesia dengan menghadirkan produk-produk berkualitas tinggi yang dipercaya oleh konsumen dan mitra usaha."
+      },
+      "mission":{
+        "title" :" Misi Kami",
+        "item1":"Menyediakan produk makanan dengan standar kualitas terbaik dan aman dikonsumsi",
+        "item2":"Membangun sistem manajemen yang kuat, profesional, dan berkelanjutan",
+        "item3":"Terus berinovasi secara konsisten untuk tetap kompetitif di pasar",
+        "item4":"Memberikan dedikasi dan pelayanan terbaik guna memuaskan pelanggan serta memenuhi kebutuhan konsumen."
+      } 
     },
     "awards": {
       "title": "Sertifikasi & Penghargaan",

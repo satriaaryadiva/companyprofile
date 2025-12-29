@@ -4,16 +4,19 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Autoplay,
+ 
   EffectFade,
+ 
+
   Navigation,
   Pagination,
-  Parallax,
+ 
 } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
-import "swiper/css/pagination";
+import "swiper/css/pagination"; 
 
 interface FadeCarouselProps {
   images: { src: string; title?: string; desc?: string }[];
@@ -27,8 +30,8 @@ export default function FadeCarousel({
   return (
     <div className="relative w-full mx-auto select-none">
       <Swiper
-        modules={[Autoplay, EffectFade, Navigation, Pagination, Parallax]}
-        effect="cube"
+        modules={[Autoplay, EffectFade , Navigation, Pagination , ]}
+        effect="fade"
         loop
         autoplay={{ delay: 3500, disableOnInteraction: false }}
         navigation
@@ -38,13 +41,13 @@ export default function FadeCarousel({
         {images.map((item, i) => (
           <SwiperSlide key={i}>
             <div
-              className={`relative w-full ${height} bg-cover bg-center bg-no-repeat`}
+              className={`relative  justify-end  w-full ${height} bg-cover bg-center bg-no-repeat`}
               style={{
                 backgroundImage: `url(${item.src})`,
               }}
             >
               {/* Layer gradient modern */}
-              <div className="absolute inset-0 bg-linear-to-b from-[#171717] via-[#171717]/20 to-black/70" />
+              <div className="absolute inset-0 p-4 bg-linear-to-b from-[#171717] via-[#171717]/20 to-black/70" />
 
               {/* Zoom animation for image */}
               <div
@@ -54,12 +57,12 @@ export default function FadeCarousel({
 
               {/* Text content if provided */}
               {(item.title || item.desc) && (
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
-                  <h2 className="text-3xl md:text-6xl font-extrabold text-white drop-shadow-lg tracking-tight">
+                <div className="absolute pt-90 inset-0 gap-3 flex flex-col  items-center justify-center text-center px-6">
+                  <h2 className="text-3xl md:text-6xl font-extrabold text-background drop-shadow-lg tracking-tight">
                     {item.title}
                   </h2>
                   {item.desc && (
-                    <p className="mt-3 text-white/90 md:text-xl max-w-3xl backdrop-blur-sm bg-white/10 px-4 py-2 rounded-xl border border-white/20">
+                    <p className="mt-3 text-white md:text-xl font-extrabold max-w-3xl backdrop-blur-sm bg-foreground/10 px-4 py-2 rounded-xl border border-white/20">
                       {item.desc}
                     </p>
                   )}
@@ -74,17 +77,17 @@ export default function FadeCarousel({
       <style jsx>{`
         .swiper-button-next,
         .swiper-button-prev {
-          color: #fff;
+          color: #fffff;
           padding: 24px;
           transition: 0.2s;
         }
         .swiper-button-next:hover,
         .swiper-button-prev:hover {
-          scale: 1.15;
+          scale: 1.30;
           opacity: 0.9;
         }
         .swiper-pagination-bullet {
-          background: #ffffffb4;
+          background: #fffff;
           width: 10px;
           height: 10px;
           transition: 0.2s;
@@ -92,7 +95,7 @@ export default function FadeCarousel({
         .swiper-pagination-bullet-active {
           width: 22px;
           border-radius: 8px;
-          background: #ffcb04; /* pakai warna palette kamu */
+          background: black; /* pakai warna palette kamu */
         }
         @keyframes zoomFade {
           0% {
