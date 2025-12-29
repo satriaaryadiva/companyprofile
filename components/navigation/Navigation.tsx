@@ -13,7 +13,7 @@ export const Navigation: React.FC = () => {
   const t = useTranslations('nav');
 
   const navItems = [
-    { label: t('home'), href: '/'  },
+    { label: t('home'), href: '/home' },
     { label: t('about'), href: '/about' },
     { label: t('products'), href: '/products' },
     { label: t('partnership'), href: '#kemitraan' },

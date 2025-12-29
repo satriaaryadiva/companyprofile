@@ -17,15 +17,15 @@ export const LanguageSwitcher: React.FC = () => {
 
   return (
     <div className="flex items-center gap-2">
-      <Globe size={20} className="text-gray-600" />
+      <Globe size={20} className="text-background" />
       <div className="flex items-center gap-1 bg-gray-100 rounded-lg p-1">
         <motion.button
           whileTap={{ scale: 0.95 }}
           onClick={() => switchLanguage('id')}
           className={`px-3 py-1 rounded-md text-sm font-medium transition-all ${
             locale === 'id'
-              ? ' shadow-sm'
-              : 'bg-foreground text-background  hover:text-gray-900'
+              ? '     hover:text-gray-900 bg-foreground'
+              : ' '
           }`}
         >
           ID
@@ -35,8 +35,8 @@ export const LanguageSwitcher: React.FC = () => {
           onClick={() => switchLanguage('en')}
           className={`px-3 py-1 rounded-md text-sm font-medium transition-all ${
             locale === 'en'
-              ? 'text-(--secondary) bg-(--secondary) shadow-sm'
-              : 'text-gray-600 hover:text-gray-900'
+              ? '     hover:text-gray-900 bg-foreground'
+              : ' ' 
           }`}
         >
           EN
