@@ -90,7 +90,7 @@ export const HeroSection: React.FC = () => {
 
               <Button variant='nav'
                 onClick={() => router.push('/contact')}
-                 
+                 className=' bg'
                 size="lg"
               >
                 {t('contactUs')}

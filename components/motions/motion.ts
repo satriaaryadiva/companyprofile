@@ -27,6 +27,18 @@ export const modalBackdrop : Variants = {
   exit: { opacity: 0 }
 };
 
+
+export const fadeUp : Variants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+};
+
+export const stagger : Variants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { delayChildren: 0.2, staggerChildren: 0.15 } }
+};
+
+
 export const modalContent : Variants = {
   initial: { scale: 0.85, opacity: 0, y: 20 },
   animate: { 

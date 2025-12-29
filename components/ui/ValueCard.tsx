@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-export const ValueCard = ({ icon: Icon, title, description, iconBg = 'bg-blue-100', iconColor = 'text-blue-600' } : {
+export const ValueCard = ({ icon: Icon, title, description, iconBg  = 'bg-blue-100', iconColor = 'text-blue-600' } : {
     icon: any;
     title: string;
     description: string;

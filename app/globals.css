@@ -6,13 +6,14 @@
   --background: #ffcb04;
   --foreground: #171717;
   --primary: #ffcb04;
+  --monsterat:       :
   --secondary:  #007f3d;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
+  --font-sans:  ;
   --font-mono: var(--);
 }
 
@@ -29,5 +30,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
 }

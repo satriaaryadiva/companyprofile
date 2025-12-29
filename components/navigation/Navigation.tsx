@@ -7,15 +7,14 @@ import { useTranslations } from 'next-intl';
 import { Button } from '../ui';
 import { LanguageSwitcher } from '../ui/LanguageSwitcher';
 
-
-export const Navigation: React.FC = ( {}) => {
+export const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const t = useTranslations('nav');
 
   const navItems = [
-    { label: t('home'), href: '#home' },
-    { label: t('about'), href: '#tentang' },
+    { label: t('home'), href: '/' },
+    { label: t('about'), href: '/about' },
     { label: t('products'), href: '/products' },
     { label: t('partnership'), href: '#kemitraan' },
     { label: t('distribution'), href: '#distribusi' },
@@ -30,40 +29,42 @@ export const Navigation: React.FC = ( {}) => {
 
   return (
     <motion.nav
-      initial={{ y: -80 }}
-      animate={{ y: 0 }}
-
-      transition={{ duration: 0.4, ease: 'easeOut' }}
-      className={`fixed w-full z-50 transition-all duration-300
-        ${scrolled 
-          ? 'bg-background/90   shadow-lg backdrop-blur-md border-b border-gray-200' 
-          : 'bg-transparent text-background'
-        }`}
+      initial={{ y: -60, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.45, ease: "easeOut" }}
+      className={`fixed w-full z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-foreground text-background  border-b border-gray-200 shadow-sm"
+          : "bg-transparent"
+      }`}
     >
-      {/* MAIN NAV */}
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="flex justify-between items-center h-20">
 
           {/* LOGO */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            className="text-3xl font-bold text-primary tracking-tight cursor-pointer"
+            animate={{ scale: scrolled ? 0.92 : 1 }}
+            transition={{ duration: 0.3 }}
+            className={`text-3xl font-bold tracking-tight cursor-pointer ${
+              scrolled ? "text-background" : "text-white"
+            }`}
           >
             RUSINDO
           </motion.div>
 
-          {/* DESKTOP MENU */}
-          <div className="hidden md:flex items-center gap-8 font-semibold">
+          {/* DESKTOP NAV */}
+          <div className="hidden md:flex items-center gap-8 font-bold tracking-wider">
             {navItems.map((item, idx) => (
               <motion.a
                 key={item.href}
                 href={item.href}
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.06 * idx }}
-                className={`transition-colors ${
-                  scrolled ? 'text-gray-700 hover:text-primary' : 'text-background hover:bg-secondary/90'
+                transition={{ delay: idx * 0.05 }}
+                className={`transition-colors text-sm ${
+                  scrolled
+                    ? "text-background hover:text-primary"
+                    : "text-white/90 hover:text-white"
                 }`}
               >
                 {item.label}
@@ -73,9 +74,9 @@ export const Navigation: React.FC = ( {}) => {
             <LanguageSwitcher />
 
             <Button
-              className="font-bold"
-              variant='nav'
+              variant="nav"
               size="md"
+              className="font-bold rounded-full px-6 shadow-sm"
               onClick={() => window.open('https://wa.me/6281260468888', '_blank')}
             >
               {t('contact')}
@@ -83,10 +84,13 @@ export const Navigation: React.FC = ( {}) => {
           </div>
 
           {/* MOBILE BUTTON */}
-          <button  className={`md:hidden   font-extrabold ${
-                  scrolled ? 'text-secondary  ' : 'text-background  hover:bg-secondary'
-                }  `}  onClick={() => setIsOpen(!isOpen)}>
-            {isOpen ? <X size={26}  /> : <Menu size={30}  />}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className={`md:hidden transition ${
+              scrolled ? "text-gray-900" : "text-white"
+            }`}
+          >
+            {isOpen ? <X size={26} /> : <Menu size={30} />}
           </button>
         </div>
       </div>
@@ -95,28 +99,29 @@ export const Navigation: React.FC = ( {}) => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white border-t shadow-md"
+            initial={{ opacity: 0, x: "-100%" }}
+            animate={{ opacity: 1, x: "0%" }}
+            exit={{ opacity: 0, x: "-100%" }}
+            transition={{ type: "spring", damping: 18 }}
+            className="md:hidden fixed top-20 left-0 w-full   bg-background shadow-xl border-b"
           >
-            <div className="px-6 py-6 space-y-4 text-gray-700 font-medium">
+            <div className="px-6 py-6 space-y-6 text-foreground font-black">
               {navItems.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
                   onClick={() => setIsOpen(false)}
-                  className="block hover:text-primary transition-colors"
+                  className="block hover:text-primary transition-colors text-base"
                 >
                   {item.label}
                 </a>
               ))}
 
-              <div className="pt-4 border-t flex justify-between items-center">
+              <div className="pt-4 border-t flex items-center justify-between">
                 <LanguageSwitcher />
-                <Button 
-                  className="font-bold" 
-                  size="sm" 
+                <Button
+                  size="sm"
+                  className="font-bold rounded-full"
                   onClick={() => window.open('https://wa.me/6281260468888', '_blank')}
                 >
                   {t('contact')}
